@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>PC</title>
+    <link rel="stylesheet" href="img/PC.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    
+</head>
+<body>
+  <br>
+  <div class="text-center">
+    <a href="ModuloPC.html" class="btn btn-primary">PC</a>
+  </div>
+    <div class="container mt-5">
+        <table id="myTable" class="table table-bordered">
+            <thead>
+                <tr >
+                    <th>idPC</th>
+                    <th>Tipo PC</th>
+                    <th>Descripcion</th>
+                    <th>Mouse</th>
+                    <th>Monitor</th>
+                    <th>Teclado</th>
+                    <th>Estado</th>
+                    <th>RAM</th>
+                    <th>Grafica</th>
+                    <th>TipoRAM</th>
+                    <th>Placa Base</th>
+                    <th>Adaptador de red</th>
+                    <th>Procesador</th>
+                    <th>Fuente de poder</th>
+                </tr>
+            </thead>  
+            <tbody>
+            </tbody>
+        </table>
+        <button class="btn btn-primary btn-lg btn-block" data-bs-toggle="modal" data-bs-target="#modalCrear">Crear</button>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tituloModal">Ver PC</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div id="contenidoModal" class="modal-body">
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalCrear" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar nuevo PC:</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Tipo:</label>
+                  <input type="text" class="form-control" id="tipo_PCVal">
+                </div>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Mouse</label>
+                  <input type="text" class="form-control" id="Mouse_PCVal">
+                </div>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Monitor</label>
+                  <input type="text" class="form-control" id="Monitor_PCVal">
+                </div>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Teclado</label>
+                  <input type="text" class="form-control" id="descripcion_PCVal">
+                </div>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Estado</label>
+                  <input type="text" class="form-control" id="descripcion_PCVal">
+                </div>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">RAM</label>
+                  <input type="text" class="form-control" id="descripcion_PCVal">
+                </div>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Grafica</label>
+                  <input type="text" class="form-control" id="descripcion_PCVal">
+                </div>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">TipoRAM</label>
+                  <input type="text" class="form-control" id="descripcion_PCVal">
+                </div>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Placa Base</label>
+                  <input type="text" class="form-control" id="descripcion_PCVal">
+                </div>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Adaptador de red</label>
+                  <input type="text" class="form-control" id="descripcion_PCVal">
+                </div>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Procesador</label>
+                  <input type="text" class="form-control" id="descripcion_PCVal">
+                </div>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Fuente de poder</label>
+                  <input type="text" class="form-control" id="descripcion_PCVal">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" id="crearBtn" class="btn btn-primary">Crear</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Editar PC:</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">Nuevo PC:</label>
+                  <input type="text" class="form-control" id="nombreValEd">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type= "button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" id="editarBtn" class="btn btn-primary">Editar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script src="./js/pc.js"></script>
+    
+</body>
+</html>
